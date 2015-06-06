@@ -1,0 +1,19 @@
+{
+  "name": "webpack-test",
+  "version": "0.0.0",
+  "description": "test webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.9.10"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "lodash": "^3.9.3"
+  }
+}
