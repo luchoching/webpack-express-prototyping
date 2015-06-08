@@ -4,6 +4,7 @@
   "description": "test webpack",
   "main": "index.js",
   "scripts": {
+    "wp": "webpack -d --display-errir-details --display-chunks --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,6 +14,7 @@
     "webpack": "^1.9.10"
   },
   "dependencies": {
+    "bootstrap": "^3.3.4",
     "jquery": "^2.1.4",
     "lodash": "^3.9.3"
   }
