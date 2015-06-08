@@ -1,24 +1,16 @@
 var path = require('path');
 var webpack = require('webpack');
-
 var nodeModulePath = path.resolve(__dirname, 'node_modules');
 var buildPath = path.resolve(__dirname, 'public', 'build');
 var mainPath = path.resolve(__dirname, 'app', 'main.js');
 
-
 var config = {
-  devtool: 'eval',
-  //the base path which will be used to resolve entry points
-  context: __dirname,
-  entry: [
-    'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:8080',
-    mainPath
-  ],
+  // we change to normal source mapping
+  devtool: 'source-map',
+  entry: mainPath,
   output: {
     path: buildPath,
-    filename: 'bundle.js',
-    publicPath: '/build'
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
@@ -42,7 +34,6 @@ var config = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: 'jquery',
