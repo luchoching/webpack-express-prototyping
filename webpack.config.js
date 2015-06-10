@@ -25,7 +25,7 @@ config.output= {
 config.module = {};
 config.module.loaders= [
   {
-    test: /\.js$/, 
+    test: /\.(js|jsx)$/, 
     loader: 'babel', 
     exclude: [nodeModulePath]
   },
@@ -46,9 +46,10 @@ config.module.loaders= [
 config.plugins= [
   new webpack.HotModuleReplacementPlugin(),
   new webpack.ProvidePlugin({
-    $: "jquery",
+    $: 'jquery',
     jQuery: 'jquery',
-    _: "lodash"
+    _: 'lodash',
+    React: 'react'
   })
 ];
  
