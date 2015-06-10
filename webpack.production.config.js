@@ -5,7 +5,7 @@ var buildPath = path.resolve(__dirname, 'public', 'build');
 var mainPath = path.resolve(__dirname, 'app', 'main.js');
 
 var config = {
-  devtool: 'source-map'
+  //devtool: 'source-map'
 };
 
 config.entry= mainPath;
@@ -24,7 +24,7 @@ config.module.loaders= [
   },
   { 
     test: /\.css$/, 
-    loader: 'style!css' 
+    loader: 'style!css'
   },
   { 
     test: /\.scss$/, 
@@ -40,6 +40,11 @@ config.plugins= [
     $: "jquery",
     jQuery: 'jquery',
     _: "lodash"
+  }),
+  new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: false
+    }
   })
 ];
 
