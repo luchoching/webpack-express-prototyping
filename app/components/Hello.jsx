@@ -8,7 +8,7 @@ class Hello extends React.Component {
     };
   }
   render() {
-   return <h2 onClick={this._handleClick}>dHello ES6 !!!! </h2>;
+   return <h2 onClick={this._handleClick}>Hello ES6 !!!! </h2>;
 
   }
   _handleClick() {
