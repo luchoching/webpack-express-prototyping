@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "rm -r public/build; node server",
     "build": "rm -r public/build; NODE_ENV=production webpack -p --config webpack.production.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "./node_modules/babel-cli/bin/babel-node.js "
   },
   "author": "",
   "license": "ISC",
